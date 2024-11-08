@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Empresa;
-use App\Models\Funcionario;
+use App\Models\Employee;
+use App\Models\Enterprise;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,14 +16,14 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('email', 45);
-            $table->string('senha', 45);
-            $table->foreignIdFor(Empresa::class);
-            $table->foreignIdFor(Funcionario::class);
+            $table->string('password', 45);
+            $table->foreignIdFor(Enterprise::class);
+            $table->foreignIdFor(Employee::class);
             $table->softDeletes();
             $table->timestamps();
         });
 
-        
+
         Schema::create('password_reset_tokens', function (Blueprint $table) {
                 $table->string('email')->primary();
                 $table->string('token');
@@ -44,7 +44,7 @@ return new class extends Migration
 
 
 
-    
+
 
     /**
      * Reverse the migrations.

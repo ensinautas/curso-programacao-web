@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Empresa;
+use App\Models\Enterprise;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,14 +12,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cursos', function (Blueprint $table) {
-            $table->id('curso_id');
-            $table->string('descricao', 45);
-            $table->string('duracao', 45);
-            $table->string('foto', 45)->nullable();
-            $table->foreignIdFor(Empresa::class);
+        Schema::create('courses', function (Blueprint $table) {
+            $table->id();
+            $table->string('description');   
+            $table->string('duration');          
+            $table->string('photo'); 
+            $table->foreignIdFor(Enterprise::class);
             $table->softDeletes();
             $table->timestamps();
+
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cursos');
+        Schema::dropIfExists('courses');
     }
 };
