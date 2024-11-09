@@ -10,7 +10,5 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route:: get('/contacto', [Principal::class,'contacto']);
-Route:: get('/login', [Principal::class, 'login']);
-
 require __DIR__.'/admin/routes.php';
+require __DIR__.'/login/routes.php';
