@@ -28,11 +28,18 @@ class LoginComponent extends Component
 
             $this->credentials = ['email' => $this->email,'password' => $this->password];
             if (Auth::attempt($this->credentials)){
-                return redirect("dashboard.admin");
+                return redirect()->route("dashboard.admin");
             }else{
-                $this->alert('warning', 'Credenciais inválidas!');
+                $this->alert('warning', 'Aviso',[
+                    "text" => "Credenciais inválidas!",
+                    'showConfirmButton' => true,
+                ]);
             }
         } catch (\Throwable $th) {
+            $this->alert('error', 'Erro!',[
+             "text" => $th->getMessage(),
+             'showConfirmButton' => true,
+            ]);
 
         }
     }
