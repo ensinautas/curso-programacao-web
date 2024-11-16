@@ -1,13 +1,14 @@
 <x-layout>
-    
+
 <div class="row">
+
 <div class="col-md-4 stretch-card grid-margin">
     <div class="card bg-gradient-danger card-img-holder text-white">
       <div class="card-body">
         <img src="{{ asset("dashboard/images/dashboard/circle.svg")}}" class="card-img-absolute" alt="circle-image" />
         <h4 class="font-weight-normal mb-3">Utilizadores <i class="mdi mdi-chart-line mdi-24px float-end"></i>
         </h4>
-        <h1 class="mb-5 text-center fw-bold">{{ $counterUsers ? $counterUsers : "" }}</h1>
+        <h1 class="mb-5 text-center fw-bold">{{ $counterUsers ? $counterUsers : 0 }}</h1>
 
       </div>
     </div>

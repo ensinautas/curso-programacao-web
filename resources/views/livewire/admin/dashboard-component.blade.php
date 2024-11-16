@@ -318,8 +318,10 @@
             </div>
 
             <!-- Dados estatisticos -->
-            <x-stats :counterUsers="$counterUsers" ></x-stats>
-             <!-- Dados estatisticos -->
+            <x-stats :counterUsers="$counterUsers">
+            </x-stats>
+            <!-- Dados estatisticos -->
+
 
 
             <div class="row">
