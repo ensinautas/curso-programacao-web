@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="{{asset("dashboard/vendors/font-awesome/css/font-awesome.min.css")}}" />
     <link rel="stylesheet" href="{{asset("dashboard/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css")}}">
      <link rel="stylesheet" href="{{asset("dashboard/css/style.css")}}">
-    <link rel="shortcut icon" href="{{asset("dashboard/images/favicon.png")}}" />    
-  </head>
+    <link rel="shortcut icon" href="{{asset("dashboard/images/favicon.png")}}" />
+    @vite(["/resources/css/app.css" , "/resources/js/app.js"])
+
+</head>
   <body>
-    
+
   {{ $slot }}
 
     <script src="{{asset("dashboard/vendors/js/vendor.bundle.base.js")}}"></script>

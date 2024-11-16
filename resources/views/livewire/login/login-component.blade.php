@@ -6,14 +6,14 @@
 
                 <div class="">
                     <label for="">Email</label>
-                    <input wire:model="email" type="email" class="form-control" id="" placeholder="name@example.com">
+                    <input wire:model="email" type="email" class="form-control" id="" >
                     @error("email") <span class="text-danger">{{ $message }}</span> @enderror
 
 
                 </div>
                 <div class="">
                     <label for="">Senha</label>
-                    <input wire:model="password" type="password" class="form-control" id="" placeholder="Password">
+                    <input wire:model="password" type="password" class="form-control" id="">
                     @error("password") <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
 

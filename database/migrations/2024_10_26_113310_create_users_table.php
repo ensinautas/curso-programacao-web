@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('email', 45);
             $table->string('password', 45);
-            $table->foreignIdFor(Enterprise::class);
-            $table->foreignIdFor(Employee::class);
+            $table->foreignIdFor(Enterprise::class)->nullabble();
+            $table->foreignIdFor(Employee::class)->nullabble();
             $table->softDeletes();
             $table->timestamps();
         });

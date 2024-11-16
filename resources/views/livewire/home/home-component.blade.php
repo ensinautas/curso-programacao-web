@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<title>Formação</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Formação de desenvolvimento web usando o framework laravel">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-</head>
-<body>
 
 <div class="super_container">
 
@@ -39,11 +22,11 @@
 						<li class="main_nav_item"><a href="courses.html">Cursos</a></li>
 						<li class="main_nav_item"><a href="elements.html">Elementos</a></li>
                         <li class="main_nav_item"><a href="/contacto">Contacto</a></li>
-						<li class="main_nav_item"><a href="/login">Login</a></li>
-						
+						<li class="main_nav_item"><a href="{{ route("login") }}">Login</a></li>
+
 					</ul>
 				</div>
-				<!-- Button to trigger the registration modal 
+				<!-- Button to trigger the registration modal
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
 	Registrar Aluno
   </button> -->
@@ -55,7 +38,7 @@
 		</div>
 
 
-  
+
   <!-- Registration Modal -->
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -88,7 +71,7 @@
 	  </div>
 	</div>
   </div>
-<!-- fim modal-->  
+<!-- fim modal-->
 
 		<!-- Hamburger -->
 		<div class="hamburger_container">
@@ -96,7 +79,7 @@
 		</div>
 
 	</header>
-	
+
 	<!-- Menu -->
 	<div class="menu_container menu_mm">
 
@@ -111,15 +94,116 @@
 				<ul class="menu_list menu_mm">
 					<li class="menu_item menu_mm"><a href="/">Home</a></li>
 					<li class="menu_item menu_mm"><a href="#">Sobre Nós</a></li>
-					<li class="menu_item menu_mm"><a href="#curso">Cursos</a></li>
+					<
+                    <div class="super_container">
+
+                        <!-- Header -->
+
+                        <header class="header d-flex flex-row">
+                            <div class="header_content d-flex flex-row align-items-center">
+                                <!-- Logo -->
+                                <div class="logo_container">
+                                    <div class="logo">
+                                        <img src="images/logo.png" alt="">
+                                        <span>Curso</span>
+                                    </div>
+                                </div>
+
+                                <!-- Main Navigation -->
+                                <nav class="main_nav_container">
+                                    <div class="main_nav">
+                                        <ul class="main_nav_list">
+                                            <li class="main_nav_item"><a href="/">home</a></li>
+                                            <li class="main_nav_item"><a href="#">Sobre Nós</a></li>
+                                            <li class="main_nav_item"><a href="courses.html">Cursos</a></li>
+                                            <li class="main_nav_item"><a href="elements.html">Elementos</a></li>
+                                            <li class="main_nav_item"><a href="/contacto">Contacto</a></li>
+                                            <li class="main_nav_item"><a href="/login">Login</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- Button to trigger the registration modal
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        Registrar Aluno
+                      </button> -->
+                                </nav>
+                            </div>
+                            <div class="header_side d-flex flex-row justify-content-center align-items-center">
+                                <img src="images/phone-call.svg" alt="">
+                                <span>+244 940 806 021</span>
+                            </div>
+
+
+
+                      <!-- Registration Modal -->
+                      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="registerModalLabel">Registro de Aluno</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form id="registerForm">
+                                <div class="mb-3">
+                                  <label for="studentName" class="form-label">Nome Completo</label>
+                                  <input type="text" class="form-control" id="studentName" required>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="studentEmail" class="form-label">Email</label>
+                                  <input type="email" class="form-control" id="studentEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="studentPassword" class="form-label">Senha</label>
+                                  <input type="password" class="form-control" id="studentPassword" required>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="studentCourse" class="form-label">Curso</label>
+                                  <input type="text" class="form-control" id="studentCourse" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Registrar</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- fim modal-->
+
+                            <!-- Hamburger -->
+                            <div class="hamburger_container">
+                                <i class="fas fa-bars trans_200"></i>
+                            </div>
+
+                        </header>
+
+                        <!-- Menu -->
+                        <div class="menu_container menu_mm">
+
+                            <!-- Menu Close Button -->
+                            <div class="menu_close_container">
+                                <div class="menu_close"></div>
+                            </div>
+
+                            <!-- Menu Items -->
+                            <div class="menu_inner menu_mm">
+                                <div class="menu menu_mm">
+                                    <ul class="menu_list menu_mm">
+                                        <li class="menu_item menu_mm"><a href="/">Home</a></li>
+                                        <li class="menu_item menu_mm"><a href="#">Sobre Nós</a></li>
+                                        <li class="menu_item menu_mm"><a href="#curso">Cursos</a></li>
+                                        <li class="menu_item menu_mm"><a href="">Elementos</a></li>
+                                        <li class="menu_item menu_mm"><a href="/contacto">Contacto</a></li>
+                                        <li class="menu_item menu_mm"><a href="/login">Login</a></li>
+
+                                    </ul>li class="menu_item menu_mm"><a href="#curso">Cursos</a></li>
 					<li class="menu_item menu_mm"><a href="">Elementos</a></li>
                     <li class="menu_item menu_mm"><a href="/contacto">Contacto</a></li>
 					<li class="menu_item menu_mm"><a href="/login">Login</a></li>
-					
+
 				</ul>
 
 				<!-- Menu Social -->
-				
+
 				<div class="menu_social_container menu_mm">
 					<ul class="menu_social menu_mm">
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
@@ -129,7 +213,7 @@
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					</ul>
 
-					<!-- Button to trigger the registration modal 
+					<!-- Button to trigger the registration modal
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
 	Registrar Aluno
   </button>-->
@@ -141,7 +225,7 @@
 		</div>
 
 	</div>
-	
+
 	<!-- Home -->
 
 	<div class="home">
@@ -149,7 +233,7 @@
 		<!-- Hero Slider -->
 		<div class="hero_slider_container">
 			<div class="hero_slider owl-carousel">
-				
+
 				<!-- Hero Slide -->
 				<div class="hero_slide">
 					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
@@ -159,7 +243,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<!-- Hero Slide -->
 				<div class="hero_slide">
 					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
@@ -169,7 +253,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<!-- Hero Slide -->
 				<div class="hero_slide">
 					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
@@ -241,7 +325,7 @@
 			</div>
 
 			<div class="row course_boxes">
-				
+
 				<!-- Popular Course Item -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
@@ -296,7 +380,7 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 
 	<!-- Register -->
@@ -304,10 +388,10 @@
 	<div class="register">
 
 		<div class="container-fluid">
-			
+
 			<div class="row row-eq-height">
 				<div class="col-lg-6 nopadding">
-					
+
 					<!-- Register -->
 
 					<div class="register_section d-flex flex-column align-items-center justify-content-center">
@@ -321,7 +405,7 @@
 				</div>
 
 				<div class="col-lg-6 nopadding">
-					
+
 					<!-- Search -->
 
 					<div class="search_section d-flex flex-column align-items-center justify-content-center">
@@ -334,7 +418,7 @@
 								<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Grau">
 								<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">Buscar Curso</button>
 							</form>
-						</div> 
+						</div>
 					</div>
 
 				</div>
@@ -345,7 +429,7 @@
 	<!-- Services -->
 
 	<div class="services page_section">
-		
+
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -428,12 +512,12 @@
 
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
-					
+
 					<div class="testimonials_slider_container">
 
 						<!-- Testimonials Slider -->
 						<div class="owl-carousel owl-theme testimonials_slider">
-							
+
 							<!-- Testimonials Item -->
 							<div class="owl-item">
 								<div class="testimonials_item text-center">
@@ -492,7 +576,7 @@
 
 	<div class="events page_section">
 		<div class="container">
-			
+
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
@@ -500,7 +584,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="event_items">
 
 				<!-- Event Item -->
@@ -529,7 +613,7 @@
 								</div>
 							</div>
 
-						</div>	
+						</div>
 					</div>
 				</div>
 
@@ -560,7 +644,7 @@
 								</div>
 							</div>
 
-						</div>	
+						</div>
 					</div>
 				</div>
 
@@ -591,12 +675,12 @@
 								</div>
 							</div>
 
-						</div>	
+						</div>
 					</div>
 				</div>
 
 			</div>
-				
+
 		</div>
 	</div>
 
@@ -604,7 +688,7 @@
 
 	<footer class="footer">
 		<div class="container">
-			
+
 			<!-- Newsletter -->
 
 			<div class="newsletter">
@@ -657,6 +741,7 @@
 						<div class="footer_column_title">Menu</div>
 						<div class="footer_column_content">
 							<ul>
+
 								<li class="footer_list_item"><a href="#">Home</a></li>
 								<li class="footer_list_item"><a href="#">Sobre nós</a></li>
 								<li class="footer_list_item"><a href="">Cursos</a></li>
@@ -675,7 +760,7 @@
 								<li class="footer_list_item"><a href="#">Testemunhos</a></li>
 								<li class="footer_list_item"><a href="#">Perguntas frequentes</a></li>
 								<li class="footer_list_item"><a href="#">Comunidade
-									
+
 									</a></li>
 								<li class="footer_list_item"><a href="#">Fotos do Campus</a></li>
 								<li class="footer_list_item"><a href="#">Mensalidades</a></li>
@@ -737,18 +822,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
 
-</body>
-</html>
+
+

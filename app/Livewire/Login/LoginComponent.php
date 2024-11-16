@@ -2,7 +2,6 @@
 namespace App\Livewire\Login;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
-use Illuminate\Http\RedirectResponse;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -16,7 +15,7 @@ class LoginComponent extends Component
         return view('livewire.login.login-component')->layout("layouts.login.app");
     }
 
-    public function authentication (): RedirectResponse{
+    public function authentication (){
         $this->validate([
             "email" => "required",
             "password" => "required"
@@ -28,7 +27,7 @@ class LoginComponent extends Component
 
             $this->credentials = ['email' => $this->email,'password' => $this->password];
             if (Auth::attempt($this->credentials)){
-                return redirect()->route("dashboard.admin");
+                return redirect()->to("admin");
             }else{
                 $this->alert('warning', 'Aviso',[
                     "text" => "Credenciais inválidas!",
