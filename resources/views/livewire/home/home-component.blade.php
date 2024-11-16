@@ -22,7 +22,7 @@
 						<li class="main_nav_item"><a href="courses.html">Cursos</a></li>
 						<li class="main_nav_item"><a href="elements.html">Elementos</a></li>
                         <li class="main_nav_item"><a href="/contacto">Contacto</a></li>
-						<li class="main_nav_item"><a href="{{ route("login") }}">Login</a></li>
+						<li class="main_nav_item"><a href="{{route("login")}}">Login</a></li>
 
 					</ul>
 				</div>

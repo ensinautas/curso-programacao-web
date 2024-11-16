@@ -27,7 +27,7 @@ class LoginComponent extends Component
 
             $this->credentials = ['email' => $this->email,'password' => $this->password];
             if (Auth::attempt($this->credentials)){
-                return redirect()->to("admin");
+                return redirect()->to("/admin");
             }else{
                 $this->alert('warning', 'Aviso',[
                     "text" => "Credenciais inválidas!",
@@ -37,6 +37,9 @@ class LoginComponent extends Component
         } catch (\Throwable $th) {
             $this->alert('error', 'Erro!',[
              "text" => $th->getMessage(),
+             "toast" => false,
+             'position' => 'center',
+             "timer" => 300000,
              'showConfirmButton' => true,
             ]);
 
