@@ -14,11 +14,11 @@ class User extends Model
         "enterprise_id",
         "employee_id"
     ];
-    public function enterprises (): BelongsTo{
+    public function enterprise (): BelongsTo{
         return $this->belongsTo(Enterprise::class);
     }
 
-    public function employees(): BelongsTo{
+    public function employee(): BelongsTo{
         return $this->belongsTo(Employee::class);
     }
 
