@@ -4,24 +4,7 @@
 <x-modal-user />
 
 <div class="container-scroller">
-      <div class="row p-0 m-0 proBanner" id="proBanner">
-        <div class="col-md-12 p-0 m-0">
-          <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-            <div class="ps-lg-3">
-              <div class="d-flex align-items-center justify-content-between">
-                <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/" target="_blank" class="btn me-2 buy-now-btn border-0">Buy Now</a>
-              </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/"><i class="mdi mdi-home me-3 text-white"></i></a>
-              <button id="bannerClose" class="btn border-0 p-0">
-                <i class="mdi mdi-close text-white mr-0"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
@@ -203,7 +186,7 @@
                 <div class="card-body">
                     <div class="d-flex gap-2">
                         <button data-bs-toggle="modal" data-bs-target="#form-user" class="btn btn-primary btn-sm">Adicionar</button>
-                        <input type="text" class="form-control" placeholder="Pesquisar" />
+                        <input wire:model.live='searcher' type="text" class="form-control" placeholder="Pesquisar" />
                     </div>
 
                     <div class="table-responsive">
@@ -219,24 +202,24 @@
                            </thead>
 
                            <tbody>
-                            @if ($users->isNotEmpty())
+                            @if (isset($users) && $users->count() > 0)
                             @foreach($users as $user)
                                 <tr>
-                                    <td>{{ $user->employee->fullname }}</td>
+                                    <td>{{ $user->fullname }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->enterprise->name }}</td>
-                                    <td>{{ $user->employee->birthday }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->birthday }}</td>
                                     <td>
                                         <div class="d-flex gap-1">
                                             <button class="btn btn-sm btn-dark">editar</button>
-                                            <button class="btn btn-sm btn-danger">eliminar</button>
+                                            <button wire:click='delete({{ $user->userid}},{{ $user->employeeid}})' class="btn btn-sm btn-danger">eliminar</button>
                                         </div>
                                     </td>
                                 </tr>
                              @endforeach
                              @else
                              <tr>
-                                <div class="alert alert-warning">Nenhum registo encontrado!</div>
+                                <div class="alert alert-warning text-center ">Nenhum registo encontrado!</div>
                              </tr>
                             @endif
                            </tbody>

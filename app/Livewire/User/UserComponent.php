@@ -13,7 +13,8 @@ use Livewire\Component;
 class UserComponent extends Component
 {
     use LivewireAlert;
-    public $fullname ,$birthday ,$position ,$location ,$phone ,$email ,$password;
+    public $iduser, $idemployee,$searcher, $fullname ,$birthday ,$position ,$location ,$phone ,$email ,$password;
+    protected $listeners = ["confirmeDeletedUser"];
     public function render()
     {
         return view('livewire.user.user-component',[
@@ -23,14 +24,73 @@ class UserComponent extends Component
 
     public function getUser(){
         try{
-        return User::all();
+            if ($this->searcher){
+                return User::query()
+                ->join("employees","users.employee_id","employees.id")
+                ->join("enterprises", "users.enterprise_id", "enterprises.id")
+                ->where("employees.fullname", "like", "%".$this->searcher."%")
+                ->get(["employees.*" , "employees.id As employeeid" , "enterprises.*" , "users.*" , "users.id As userid"])
+                ->get();
+            }else{
+                return User::query()
+                ->join("employees","users.employee_id","employees.id")
+                ->join("enterprises", "users.enterprise_id", "enterprises.id")
+                ->select(["employees.*" , "employees.id As employeeid" , "enterprises.*" , "users.*" , "users.id As userid"])
+                ->get();
+            }
+
         }catch(\Exception $ex){
 
         }
     }
 
+    public function delete($userid, $employeeid){
+       try {
+        $this->iduser = $userid;
+        $this->idemployee = $employeeid;
+
+        $this->alert('warning', 'Aviso!',[
+            "toast" => false,
+            'position' => 'center',
+            "text" =>"Deseja excluir este registo?",
+            "timer" => 300000,
+            'showConfirmButton' => true,
+            'confirmButtonText' => 'Confirmar',
+            'showCancelButton' => true,
+            "cancelButtonText" => 'Cancelar',
+             'onConfirmed' => 'confirmeDeletedUser'
+           ]);
+       } catch (\Throwable $th) {
+        $this->alert('error', 'Erro!',[
+            "toast" => false,
+            'position' => 'center',
+            "text" => $th->GetMessage(),
+            "timer" => 300000,
+            'showConfirmButton' => true,
+           ]);
+       }
+    }
+
+    public function confirmeDeletedUser (){
+        try {
+            DB::BeginTransaction();
+            User::find($this->iduser)->delete();
+            Employee::find($this->idemployee)->delete();
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            $this->alert('error', 'Erro!',[
+                "toast" => false,
+                'position' => 'center',
+                "text" => $th->GetMessage(),
+                "timer" => 300000,
+                'showConfirmButton' => true,
+            ]);
+        }
+    }
+
     public function save(){
-        
+
         $this->validate([
             "fullname" => "required",
             "birthday" => "required",
@@ -64,7 +124,6 @@ class UserComponent extends Component
             "enterprise_id" =>$this->getCurrentIdOfEnterprise()->id
             ]);
             DB::commit();
-
             $this->alert('success', 'Sucesso!',[
                 "toast" => false,
                 'position' => 'center',
@@ -72,6 +131,7 @@ class UserComponent extends Component
                 "timer" => 300000,
                 'showConfirmButton' => true,
                ]);
+
             $this->reset([
                 "fullname",
                 "birthday",

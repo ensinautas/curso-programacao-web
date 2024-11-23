@@ -18,6 +18,8 @@
   <body>
 
   {{ $slot }}
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <x-livewire-alert::scripts />
 
     <script src="{{asset("dashboard/vendors/js/vendor.bundle.base.js")}}"></script>
     <script src="{{asset("dashboard/vendors/chart.js/chart.umd.js")}}"></script>
