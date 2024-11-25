@@ -18,7 +18,7 @@
   <body>
 
   {{ $slot }}
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="{{ url("dashboard/js/sweetalert.js") }}"></script>
   <x-livewire-alert::scripts />
 
     <script src="{{asset("dashboard/vendors/js/vendor.bundle.base.js")}}"></script>

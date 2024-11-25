@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('email', 45);
-            $table->string('password', 45);
+            $table->string('email');
+            $table->string('password');
             $table->foreignIdFor(Enterprise::class)->nullabble();
             $table->foreignIdFor(Employee::class)->nullabble();
             $table->softDeletes();

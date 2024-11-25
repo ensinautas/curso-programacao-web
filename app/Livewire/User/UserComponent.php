@@ -115,11 +115,12 @@ class UserComponent extends Component
                 "birthday" =>$this->birthday,
                 "location" =>$this->location,
                 "phone" =>$this->phone,
+                "position" =>$this->position,
           ]);
 
             User::create([
             "email" =>$this->email,
-            "password" =>  Hash::make($this->password),
+            "password" => Hash::make($this->password),
             "employee_id" =>$employee->id,
             "enterprise_id" =>$this->getCurrentIdOfEnterprise()->id
             ]);

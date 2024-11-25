@@ -1,7 +1,8 @@
 <?php
 namespace App\Livewire\Login;
+
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Livewire\Attributes\Validate;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -15,7 +16,7 @@ class LoginComponent extends Component
         return view('livewire.login.login-component')->layout("layouts.login.app");
     }
 
-    public function authentication (){
+    public function authentication (){        
         $this->validate([
             "email" => "required",
             "password" => "required"
@@ -24,19 +25,29 @@ class LoginComponent extends Component
             "password.required" => "O campo senha é obrigatório"
         ]);
         try {
-
-            $this->credentials = ['email' => $this->email,'password' => $this->password];
-            if (Auth::attempt($this->credentials)){
-                return redirect()->to("/admin");
-            }else{
+            $user = User::query()->select("email")->first();
+            if (Auth::attempt(['email' =>$this->email, 'password' =>$this->password])){
+                return redirect()->route("dashboard.admin");
+                
+            }else  if(!$user->email){
                 $this->alert('warning', 'Aviso',[
-                    "text" => "Credenciais inválidas!",
+                    "text" => "Email não encontrado!",
+                    "toast" =>false,
+                    "position" =>'center',
                     'showConfirmButton' => true,
                 ]);
+            }else{
+                $this->alert('warning', 'Aviso',[
+                    "text" => "Credenciais inválidas, tente novamente!",
+                    "toast" =>false,
+                    "position" =>'center',
+                    'showConfirmButton' => true,
+                ]);
+
             }
         } catch (\Throwable $th) {
             $this->alert('error', 'Erro!',[
-             "text" => $th->getMessage(),
+             "text" => $th->GetMessage(),
              "toast" => false,
              'position' => 'center',
              "timer" => 300000,
