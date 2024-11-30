@@ -275,33 +275,24 @@
 	<div class="hero_boxes">
 		<div class="hero_boxes_inner">
 			<div class="container">
-				<div class="row">
+				<div class="row d-flex justify-content-center">
 
-					<div class="col-lg-4 hero_box_col">
+					<div class="col-lg-4 hero_box_col text-uppercase">
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/earth-globe.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">Cursos Online</h2>
+								<h3 class="text-white">Cursos Online</h3>
 								<a href="courses.html" class="hero_box_link">Ver Mais</a>
 							</div>
 						</div>
 					</div>
+					
 
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="images/books.svg" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title"> Nossa Biblioteca</h2>
-								<a href="courses.html" class="hero_box_link">Ver Mais</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 hero_box_col">
+					<div class="col-lg-4 hero_box_col text-uppercase">
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/professor.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">Nossos Professores</h2>
+								<h3 class="text-white">Nossos Professores</h3>
 								<a href="teachers.html" class="hero_box_link">Ver Mais</a>
 							</div>
 						</div>
@@ -329,102 +320,22 @@
 				<!-- Popular Course Item -->
 				<div class="col-lg-4 course_box">
 					<div class="card">
-						<img class="card-img-top" src="images/course_1.jpg" alt="https://unsplash.com/@kellybrito">
+						<img class="card-img-top rounded" src="images/course_1.jpg" alt="https://unsplash.com/@kellybrito">
 						<div class="card-body text-center">
 							<div class="card-title"><a href="courses.html">Um guia completo para design</a></div>
-							<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+							<div class="card-text"></div>
 						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>5000,00</span></div>
-						</div>
+						
 					</div>
 				</div>
 
-				<!-- Popular Course Item -->
-				<div class="col-lg-4 course_box">
-					<div class="card">
-						<img class="card-img-top" src="images/course_2.jpg" alt="https://unsplash.com/@cikstefan">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">Guia para iniciantes em HTML</a></div>
-							<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
-						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>5000,00</span></div>
-						</div>
-					</div>
-				</div>
+			
 
-				<!-- Popular Course Item -->
-				<div class="col-lg-4 course_box">
-					<div class="card">
-						<img class="card-img-top" src="images/course_3.jpg" alt="https://unsplash.com/@dsmacinnes">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html">Photoshop avançado</a></div>
-							<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
-						</div>
-						<div class="price_box d-flex flex-row align-items-center">
-							<div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>5000,00</span></div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Register -->
-
-	<div class="register">
-
-		<div class="container-fluid">
-
-			<div class="row row-eq-height">
-				<div class="col-lg-6 nopadding">
-
-					<!-- Register -->
-
-					<div class="register_section d-flex flex-column align-items-center justify-content-center">
-						<div class="register_content text-center">
-							<h1 class="register_title">Cadastre-se agora e ganhe um desconto de <span>50%</span> até 1 de janeiro</h1>
-							<p class="register_text">Descontos Explosivos! Não Deixe Passar, Garanta Seu Futuro!</p>
-							<div class="button button_1 register_button mx-auto trans_200"><a href="#">Registre-se Agora</a></div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="col-lg-6 nopadding">
-
-					<!-- Search -->
-
-					<div class="search_section d-flex flex-column align-items-center justify-content-center">
-						<div class="search_background" style="background-image:url(images/search_background.jpg);"></div>
-						<div class="search_content text-center">
-							<h1 class="search_title">Procure seu curso</h1>
-							<form id="search_form" class="search_form" action="post">
-								<input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Nome Curso" required="required" data-error="Course name is required.">
-								<input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Categoria">
-								<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Grau">
-								<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">Buscar Curso</button>
-							</form>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<!-- Services -->
 
@@ -448,23 +359,8 @@
 					<h3>Cursos Online</h3>
 					<p>Crie, explore e inspire. O mundo das artes espera por suas mãos talentosas</p>
 				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/exam.svg" alt="">
-					</div>
-					<h3>Cursos Indoor </h3>
-					<p>Crie, explore e inspire. O mundo das artes espera por suas mãos talentosas</p>
-				</div>
-
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/books.svg" alt="">
-					</div>
-					<h3>Biblioteca incrível</h3>
-					<p>Crie, explore e inspire. O mundo das artes espera por suas mãos talentosas.</p>
-				</div>
-
+				
+				
 				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
 					<div class="icon_container d-flex flex-column justify-content-end">
 						<img src="images/professor.svg" alt="">
@@ -481,241 +377,22 @@
 					<p>Desperte o artista que há em você! Transforme ideias em obras de arte com nossas aulas criativas.</p>
 				</div>
 
-				<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
-					<div class="icon_container d-flex flex-column justify-content-end">
-						<img src="images/mortarboard.svg" alt="">
-					</div>
-					<h3>Diploma de Graduação</h3>
-					<p>Desperte o artista que há em você! Transforme ideias em obras de arte com nossas aulas criativas.</p>
-				</div>
+				
 
 			</div>
 		</div>
 	</div>
 
-	<!-- Testimonials -->
-
-	<div class="testimonials page_section">
-		<!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
-		<div class="testimonials_background_container prlx_parent">
-			<div class="testimonials_background prlx" style="background-image:url(images/testimonials_background.jpg)"></div>
-		</div>
-		<div class="container">
-
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>O que nossos alunos dizem</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-
-					<div class="testimonials_slider_container">
-
-						<!-- Testimonials Slider -->
-						<div class="owl-carousel owl-theme testimonials_slider">
-
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">Participar deste curso foi uma das melhores decisões que tomei! Aprendi muito mais do que esperava, e a experiência prática me deu confiança para aplicar os conhecimentos no dia a dia. Recomendo a todos que buscam crescimento e aperfeiçoamento.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="images/testimonials_user.jpg" alt="">
-										</div>
-										<div class="testimonial_name">james cooper</div>
-										<div class="testimonial_title">Estudante de Pós-Graduação</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">Participar deste curso foi uma das melhores decisões que tomei! Aprendi muito mais do que esperava, e a experiência prática me deu confiança para aplicar os conhecimentos no dia a dia. Recomendo a todos que buscam crescimento e aperfeiçoamento.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="images/testimonials_user.jpg" alt="">
-										</div>
-										<div class="testimonial_name">james cooper</div>
-										<div class="testimonial_title">Estudante de Pós-Graduação</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Testimonials Item -->
-							<div class="owl-item">
-								<div class="testimonials_item text-center">
-									<div class="quote">“</div>
-									<p class="testimonials_text">Participar deste curso foi uma das melhores decisões que tomei! Aprendi muito mais do que esperava, e a experiência prática me deu confiança para aplicar os conhecimentos no dia a dia. Recomendo a todos que buscam crescimento e aperfeiçoamento.</p>
-									<div class="testimonial_user">
-										<div class="testimonial_image mx-auto">
-											<img src="images/testimonials_user.jpg" alt="">
-										</div>
-										<div class="testimonial_name">james cooper</div>
-										<div class="testimonial_title">Estudante de Pós-Graduação</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- Events -->
-
-	<div class="events page_section">
-		<div class="container">
-
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h1>Próximos eventos</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="event_items">
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">January</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#"> Festival Estudantil</a></div>
-									<div class="event_location">Grande Parque Central</div>
-									<p>Participar deste curso foi uma das melhores decisões que tomei! Aprendi muito mais do que esperava, e a experiência prática me deu confiança para aplicar os conhecimentos no dia a dia. Recomendo a todos que buscam crescimento e aperfeiçoamento.</p>
-								</div>
-							</div>
-
-							<div class="col-lg-4 order-lg-3 order-1">
-								<div class="event_image">
-									<img src="images/event_1.jpg" alt="https://unsplash.com/@theunsteady5">
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">January</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#"> Festival Estudantil</a></div>
-									<div class="event_location">Grande Parque Central</div>
-									<p>Participar deste curso foi uma das melhores decisões que tomei! Aprendi muito mais do que esperava, e a experiência prática me deu confiança para aplicar os conhecimentos no dia a dia. Recomendo a todos que buscam crescimento e aperfeiçoamento.</p>
-								</div>
-							</div>
+	
 
 
-							<div class="col-lg-4 order-lg-3 order-1">
-								<div class="event_image">
-									<img src="images/event_2.jpg" alt="https://unsplash.com/@claybanks1989">
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- Event Item -->
-				<div class="row event_item">
-					<div class="col">
-						<div class="row d-flex flex-row align-items-end">
-
-							<div class="col-lg-2 order-lg-1 order-2">
-								<div class="event_date d-flex flex-column align-items-center justify-content-center">
-									<div class="event_day">07</div>
-									<div class="event_month">January</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 order-lg-2 order-3">
-								<div class="event_content">
-									<div class="event_name"><a class="trans_200" href="#"> Festival Estudantil</a></div>
-									<div class="event_location">Grande Parque Central</div>
-									<p>Participar deste curso foi uma das melhores decisões que tomei! Aprendi muito mais do que esperava, e a experiência prática me deu confiança para aplicar os conhecimentos no dia a dia. Recomendo a todos que buscam crescimento e aperfeiçoamento.</p>
-								</div>
-							</div>
-
-
-							<div class="col-lg-4 order-lg-3 order-1">
-								<div class="event_image">
-									<img src="images/event_3.jpg" alt="https://unsplash.com/@juanmramosjr">
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</div>
 
 	<!-- Footer -->
 
 	<footer class="footer">
 		<div class="container">
 
-			<!-- Newsletter -->
-
-			<div class="newsletter">
-				<div class="row">
-					<div class="col">
-						<div class="section_title text-center">
-							<h1>Assinar newsletter</h1>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col text-center">
-						<div class="newsletter_form_container mx-auto">
-							<form action="post">
-								<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-									<input id="newsletter_email" class="newsletter_email" type="email" placeholder="Endereço Email" required="required" data-error="Valid email is required.">
-									<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Inscrever-se</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Footer Content -->
+			
 
 			<div class="footer_content">
 				<div class="row">

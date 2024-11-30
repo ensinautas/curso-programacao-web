@@ -29,7 +29,7 @@ class UserComponent extends Component
                 ->join("employees","users.employee_id","employees.id")
                 ->join("enterprises", "users.enterprise_id", "enterprises.id")
                 ->where("employees.fullname", "like", "%".$this->searcher."%")
-                ->get(["employees.*" , "employees.id As employeeid" , "enterprises.*" , "users.*" , "users.id As userid"])
+                ->select(["employees.*" , "employees.id As employeeid" , "enterprises.*" , "users.*" , "users.id As userid"])
                 ->get();
             }else{
                 return User::query()
