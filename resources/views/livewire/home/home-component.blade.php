@@ -9,7 +9,7 @@
 			<div class="logo_container">
 				<div class="logo">
 					<img src="images/logo.png" alt="">
-					<span>Curso</span>
+					<span style="font-size: 15px !important;">Curso de Programação Web</span>
 				</div>
 			</div>
 
@@ -18,10 +18,8 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="/">home</a></li>
-						<li class="main_nav_item"><a href="#">Sobre Nós</a></li>
-						<li class="main_nav_item"><a href="courses.html">Cursos</a></li>
-						<li class="main_nav_item"><a href="elements.html">Elementos</a></li>
-                        <li class="main_nav_item"><a href="/contacto">Contacto</a></li>
+						<li class="main_nav_item"><a href="#courses">Cursos</a></li>
+                        <li class="main_nav_item"><a href="#footer">Contacto</a></li>
 						<li class="main_nav_item"><a href="{{route("login")}}">Login</a></li>
 
 					</ul>
@@ -39,39 +37,6 @@
 
 
 
-  <!-- Registration Modal -->
-  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="registerModalLabel">Registro de Aluno</h5>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-		  <form id="registerForm">
-			<div class="mb-3">
-			  <label for="studentName" class="form-label">Nome Completo</label>
-			  <input type="text" class="form-control" id="studentName" required>
-			</div>
-			<div class="mb-3">
-			  <label for="studentEmail" class="form-label">Email</label>
-			  <input type="email" class="form-control" id="studentEmail" required>
-			</div>
-			<div class="mb-3">
-			  <label for="studentPassword" class="form-label">Senha</label>
-			  <input type="password" class="form-control" id="studentPassword" required>
-			</div>
-			<div class="mb-3">
-			  <label for="studentCourse" class="form-label">Curso</label>
-			  <input type="text" class="form-control" id="studentCourse" required>
-			</div>
-			<button type="submit" class="btn btn-primary">Registrar</button>
-		  </form>
-		</div>
-	  </div>
-	</div>
-  </div>
-<!-- fim modal-->
 
 		<!-- Hamburger -->
 		<div class="hamburger_container">
@@ -196,7 +161,6 @@
                                         <li class="menu_item menu_mm"><a href="/login">Login</a></li>
 
                                     </ul>li class="menu_item menu_mm"><a href="#curso">Cursos</a></li>
-					<li class="menu_item menu_mm"><a href="">Elementos</a></li>
                     <li class="menu_item menu_mm"><a href="/contacto">Contacto</a></li>
 					<li class="menu_item menu_mm"><a href="/login">Login</a></li>
 
@@ -305,7 +269,7 @@
 
 	<!-- Popular -->
 
-	<div class="popular page_section">
+	<div id="courses" class="popular page_section">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -389,7 +353,7 @@
 
 	<!-- Footer -->
 
-	<footer class="footer">
+	<footer id="footer" class="footer">
 		<div class="container">
 
 			
@@ -404,7 +368,7 @@
 						<div class="logo_container">
 							<div class="logo">
 								<img src="images/logo.png" alt="">
-								<span>Curso</span>
+								<span style="font-size: 15px !important">Curso de Programação Web</span>
 							</div>
 						</div>
 
@@ -420,7 +384,6 @@
 							<ul>
 
 								<li class="footer_list_item"><a href="#">Home</a></li>
-								<li class="footer_list_item"><a href="#">Sobre nós</a></li>
 								<li class="footer_list_item"><a href="">Cursos</a></li>
 								<li class="footer_list_item"><a href="">Contacto</a></li>
 								<li class="footer_list_item"><a href="">Login</a></li>
